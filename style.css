@@ -11,14 +11,14 @@ body{
 
 .container{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
 }
 
 .side{
     width: 450px;
-    height: 100px
+    height: 800px;
 }
 
 .profile{
@@ -60,6 +60,8 @@ body{
 }
 .card:hover{
     animation: glow-off infinite;
+    /* scale: 1.01; */
+    transition: all 1s;
 }
 
 @keyframes glow {
@@ -168,27 +170,252 @@ body{
     display: flex;
     margin: 10px;
     justify-content: center;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    /* background-color: #FF204E; */
+
 }
 
 .sort ul li{
-    padding: 10px;
-    background-color: white;
-    border: 1.5px solid #C63C51;
-    color: black;
+    padding: 7px 10px;
+    color: #481E14;
     cursor: pointer;
 }
 
+.sort ul li:hover{
+    scale: 1.02;
+}
+
+.ac{
+    background-color: gray;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
 .all{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
+.skill h4{
+    text-align: center;
+    color:  #FFC470;
+}
+.skill p{
+    font-size: small;
+    width: 100%;
+}
 .skill{
-    padding: 20px;
-    width: 150px;
-    height: 150px;
-    background-color: rgb(32,33,36);
-    box-shadow: 0px 0px 10px rgb(5, 6, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #4793AF;
+    box-shadow: 0px 0px 5px #4793AF;
     margin: 20px;
+}
+
+.skill:hover{
+    cursor: pointer;
+}
+
+.stars span{
+    color: gold;
+    /* animation: one-star infinite 1s; */
+}
+
+.one {
+    animation: one-star infinite 3s;
+}
+
+.two{
+    animation: one-star infinite 1s;
+}
+
+.three{
+    animation: one-star infinite 2s;
+}
+
+.nst{
+    color: white;
+}
+
+.skill:hover .st{
+    color: gold;
+    animation: stop infinite;
+}
+
+.skill:hover .nst{
+    color: white;
+}
+
+@keyframes stop {
+    100%{
+        color: gold;
+    }
+}
+
+@keyframes one-star {
+    0%{
+        color: white;
+    }
+    100%{
+        color: gold;
+    }
+}
+
+
+
+@media only screen and (max-width: 320px){
+    .profile{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .card{
+        border: 1px solid #C63C51;
+        box-shadow: 0px 0px 40px #C63C51;
+        padding: 30px;
+        width: 200px;
+        gap: 10px;
+    }
+    .card a{
+        font-size: medium;
+    }
+    .card p{
+        font-size: 10px;
+    }
+    .card h2{
+        font-size: large;
+    }
+
+
+    .content{
+        margin: 30px;
+        margin-top: -100px;
+        width: 270px;
+    }
+
+    .all{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 200px;
+    }
+    
+    .sort ul li{
+        padding: 2px 4px;
+        color: #481E14;
+        cursor: pointer;
+        font-size: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    .skill{
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+
+    .stars span{
+        font-size: 8px;
+    }
+
+    .skill h4{
+        font-size: 13px;
+    }
+    
+
+}
+
+
+@media only screen and (max-width: 320px){
+    .profile{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .card{
+        border: 1px solid #C63C51;
+        box-shadow: 0px 0px 40px #C63C51;
+        padding: 30px;
+        width: 200px;
+        gap: 10px;
+    }
+    .card a{
+        font-size: medium;
+    }
+    .card p{
+        font-size: 10px;
+    }
+    .card h2{
+        font-size: large;
+    }
+
+
+    .content{
+        margin: 30px;
+        margin-top: -100px;
+        width: 270px;
+    }
+
+    .all{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 200px;
+    }
+    
+    .sort ul li{
+        padding: 2px 4px;
+        color: #481E14;
+        cursor: pointer;
+        font-size: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    .skill{
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+
+    .stars span{
+        font-size: 8px;
+    }
+
+    .skill h4{
+        font-size: 13px;
+    }
+   
+
+}
+
+
+@media only screen and (max-width: 375px){
+    
+
 }
